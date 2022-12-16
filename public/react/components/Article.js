@@ -18,13 +18,17 @@ export function Article(props) {
 
     }
 
+    const date = props.article.createdAt.substring(0, 10).replaceAll("-", "/");
+    console.log(date);
+
+
 
 
     return(
         <div className="article">
         <h2>{props.article.title}</h2>    
         <p><b>Author:</b> {props.article.author.name}</p>
-        <p><b>Published:</b>{props.article.createdAt}</p>
+        <p><b>Published:</b>{date}</p>
         <p>{props.article.content}</p>
         <b>Tags:</b>
         {props.article.tags.map(tag => <p key={tag.id}> {tag.name}</p>)}
