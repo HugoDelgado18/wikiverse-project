@@ -7,4 +7,12 @@
 main {
   padding: 1rem;
   height: 100vh;
+  /* position: relative; */
+}
+
+.article {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  /* border: 3px solid black; */
 }
